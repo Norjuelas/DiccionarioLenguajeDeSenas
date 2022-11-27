@@ -1,6 +1,8 @@
 
 package Data;
 
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author Nicolas Orjuela
@@ -19,4 +21,7 @@ package Data;
 */
 public class Caracteres {
     
+    private String nombreCaracter;
+    
+    private ImageIcon imagen;
 }
