@@ -24,4 +24,26 @@ public class Caracteres {
     private String nombreCaracter;
     
     private ImageIcon imagen;
+
+    public String getNombreCaracter() {
+        return nombreCaracter;
+    }
+
+    public void setNombreCaracter(String nombreCaracter) {
+        this.nombreCaracter = nombreCaracter;
+    }
+
+    public ImageIcon getImagen() {
+        return imagen;
+    }
+
+    public void setImagen(ImageIcon imagen) {
+        this.imagen = imagen;
+    }
+
+    public Caracteres(String nombreCaracter, ImageIcon imagen) {
+        this.nombreCaracter = nombreCaracter;
+        this.imagen = imagen;
+    }
+    
 }
