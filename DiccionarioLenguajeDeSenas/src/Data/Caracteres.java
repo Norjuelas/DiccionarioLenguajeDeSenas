@@ -45,5 +45,13 @@ public class Caracteres {
         this.nombreCaracter = nombreCaracter;
         this.imagen = imagen;
     }
+
+    @Override
+    public String toString() {
+        return "Caracteres{" + "nombreCaracter=" + nombreCaracter + ", imagen=" + imagen + '}';
+    }
+    
+    
+         
     
 }
