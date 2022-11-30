@@ -35,7 +35,7 @@ public class Pixel {
     public Pixel() {
 
         try {
-            File input = new File("A.PNG");
+            File input = new File("LetrasAbecedario/D.PNG");
             image = ImageIO.read(input);
             width = image.getWidth();
             height = image.getHeight();
