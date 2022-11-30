@@ -1,15 +1,14 @@
-
 package diccionariolenguajedesenas;
+import Data.Pixel;
 
 /**
  *
  * @author Nicolas Orjuela y Jeison Diaz
  */
-
 public class DiccionarioLenguajeDeSenas {
 
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
-    
+   static public void main(String args[]) throws Exception {
+      Pixel obj = new Pixel();
+   }
 }
+
