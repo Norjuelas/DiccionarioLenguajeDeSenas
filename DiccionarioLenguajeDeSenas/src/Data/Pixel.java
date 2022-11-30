@@ -6,6 +6,10 @@ import java.awt.image.BufferedImage;
 import java.io.*;
 
 import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
 
 /**
  *
@@ -23,31 +27,27 @@ import javax.imageio.ImageIO;
  * atributo imagen de cada palabra cuando esta sea solicitada al programa
  */
 public class Pixel {
-   BufferedImage image;
-   int width;
-   int height;
-   
-   public Pixel() {
-      try {
-         File input = new File("A.PNG");
-         image = ImageIO.read(input);
-         width = image.getWidth();
-         height = image.getHeight();
-         
-         int count = 0;
-         
-         for(int i=0; i<height; i++) {
-         
-            for(int j=0; j<width; j++) {
-            
-               count++;
-               Color c = new Color(image.getRGB(j, i));
-               System.out.println("S.No: " + count + " Red: " + c.getRed() +"  Green: " + c.getGreen() + " Blue: " + c.getBlue());
-            }
-         }
 
-      } catch (IOException e) {}
-   }
-   
+    BufferedImage image;
+    int width;
+    int height;
 
+    public Pixel() {
+
+        try {
+            File input = new File("A.PNG");
+            image = ImageIO.read(input);
+            width = image.getWidth();
+            height = image.getHeight();
+            JLabel picLabel = new JLabel(new ImageIcon(image));
+            JPanel jPanel = new JPanel();
+            jPanel.add(picLabel);
+            JFrame f = new JFrame();
+            f.setSize(new Dimension(image.getWidth(), image.getHeight()));
+            f.add(jPanel);
+            f.setVisible(true);
+        } catch (IOException e) {
+            System.out.println("Error de escritura");
+        }
+    }
 }
